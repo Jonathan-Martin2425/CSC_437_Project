@@ -1,0 +1,14 @@
+:root {
+    --fontfamily-text: "Special Gothic", sans-serif;
+    --fontfamily-header: "Oswald", sans-serif;
+    --color-text: #C0C0C0;
+    --color-header: #1434A4;
+    --color-link: #20e1ff;
+    --color-list: #32cd30;
+    --backgroundcolor-body: #808080;
+    --backgroundcolor-header: #AEAEAE;
+    --leftmargin-main: 2em;
+    --verticalmargin-main: 2em;
+    --gap-header-link: 2em;
+    --gap-text: 1em
+}
