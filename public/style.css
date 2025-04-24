@@ -11,13 +11,19 @@ h1, h2, h3, h4, h5, h6{
 header {
     display: grid;
     grid-template-columns: 40vw 60vw;
-    background-color: #aeaeae;
+    background-color: var(--backgroundcolor-header);
+}
+
+header h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 nav {
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: center;
     align-items: center;
     gap: var(--gap-header-link);
 }
