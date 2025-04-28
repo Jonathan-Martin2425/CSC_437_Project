@@ -29,6 +29,18 @@ header h1 {
     justify-self: left;
     margin-left: var(--margin-header);
 }
+.menu-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+.menu-container label {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 
 .menu {
     display: none;
@@ -141,11 +153,3 @@ a:hover {
         display: none;
     }
 }
-
-/*colors
-    silver: #C0C0C0
-    gray: #808080
-    light blue/cyan: #20e1ff
-    dark blue: #1434A4
-    Lime Green: #32cd30
-*/

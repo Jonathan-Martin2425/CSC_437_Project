@@ -27,10 +27,32 @@ function constructHeader() {
     nav.id = "nav";
     hObj.appendChild(nav);
 
+    const menuContainer = document.createElement("div");
+    menuContainer.classList = "menu-container"
     const menu = document.createElement("button");
     menu.classList = "menu";
     menu.textContent = "Menu";
-    hObj.appendChild(menu);
+
+    const lightModeToggle = document.createElement("label");
+    const lightModeInput = document.createElement("input");
+    const lightModeText = document.createElement("p");
+    lightModeText.textContent = "Light Mode";
+    lightModeInput.setAttribute("type", "checkbox");
+    lightModeInput.setAttribute("autocomplete", "off");
+    lightModeInput.classList = "checkbox";
+    lightModeToggle.appendChild(lightModeInput);
+    lightModeToggle.appendChild(lightModeText);
+
+    menuContainer.appendChild(lightModeToggle);
+    menuContainer.appendChild(menu);
+    hObj.appendChild(menuContainer);
+
+    const status = localStorage.getItem("light-mode");
+    if(status && localStorage.getItem("light-mode") === "on"){
+        document.body.classList.toggle("light-mode");
+        lightModeInput.setAttribute("autocomplete", "on");
+        lightModeInput.setAttribute("checked", "on");
+    }
 
     return hObj;
 }
@@ -46,17 +68,17 @@ function addSubpage(nav, sPage) {
 
 function main(){
 
-    // creates header using JS and initializes button and nav varriables
+    // creates header using JS and initializes button, nav, checkbox varriables
     constructHeader();
     const nav = document.getElementById("nav");
     const button = document.getElementsByClassName("menu")[0];
+    const checkbox = document.getElementsByClassName("checkbox")[0];
     subpages.forEach((sPage) => {addSubpage(nav, sPage)});
     
     //adds eventListener to button and initializes hidden nav bar
     nav.classList.toggle("closed");
     button.addEventListener("click", (e) => {
         nav.classList.toggle("closed");
-        console.log("clicked");
     });
 
     // closes nav bar when not clicking button
@@ -65,6 +87,16 @@ function main(){
             nav.classList = "closed";
         }
     })
+
+    checkbox.addEventListener("change", (e) => {
+        document.body.classList.toggle("light-mode");
+        const status = localStorage.getItem("light-mode");
+        if(status === "on"){
+            localStorage.setItem("light-mode", "off");
+        }else{
+            localStorage.setItem("light-mode", "on");
+        }
+    });
 }
 
 main();

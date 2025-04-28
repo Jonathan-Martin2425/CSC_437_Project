@@ -18,3 +18,12 @@
     --border-test: 1px solid firebrick;
     --grid-template-columns-header-mobile: 3fr 1fr;
 }
+
+body.light-mode {
+    --backgroundcolor-body: #fff;
+    --backgroundcolor-header: #dddddd;
+    --color-text: #000;
+    --color-header: #587dff;
+    --color-link: #008094;
+    --color-list: #1a7019;
+}
