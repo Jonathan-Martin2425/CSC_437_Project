@@ -8,24 +8,46 @@ h1, h2, h3, h4, h5, h6{
     color: var(--color-header);
 }
 
+body {
+    font-family: var(--fontfamily-text);
+    background-color: var(--backgroundcolor-body);
+    color: var(--color-text);
+}
+
 header {
-    display: grid;
-    grid-template-columns: 40vw 60vw;
+    display: flex;
+    width: 100%;
+    gap: var(--gap-text);
     background-color: var(--backgroundcolor-header);
 }
 
 header h1 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: left;
+
+    justify-self: left;
+    margin-left: var(--margin-header);
+}
+
+.menu {
+    display: none;
+
+    background-color: var(--backgroundcolor-header);
+    border: var(--border-menu);
 }
 
 nav {
     display: flex;
-    flex-direction: row;
     justify-content: center;
     align-items: center;
+
+    align-self: left;
+    justify-self: left;
     gap: var(--gap-header-link);
+    visibility: visible;
+
+    border: var(--border-test);
 }
 
 main {
@@ -38,8 +60,7 @@ main {
     flex-direction: column;
     justify-content: center;
     gap: var(--gap-text);
-    margin: var(--verticalmargin-main) var(--leftmargin-main);
-    border: 1px solid;
+    margin: var(--margin-selfinfo);
 }
 
 .section {
@@ -47,12 +68,6 @@ main {
     flex-direction: column;
     gap: var(--gap-text);
     margin-left: var(--leftmargin-main);
-}
-
-body {
-    font-family: var(--fontfamily-text);
-    background-color: var(--backgroundcolor-body);
-    color: var(--color-text);
 }
 
 b {
@@ -80,8 +95,51 @@ a:hover {
 }
 
 .line {
-    border-right: 1px solid var(--color-list);
     display: block;
+    border-right: var(--border-line);
+}
+
+@media (max-width: 500px) {
+    body {
+        display: grid;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: var(--grid-template-columns-header-mobile);
+        background-color: var(--backgroundcolor-header);
+    }
+    
+    header h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        justify-self: left;
+    }
+
+    nav {
+        display: flex;
+        grid-row: 2;
+        flex-direction: column;
+        
+        margin: var(--margin-nav);
+    }
+
+    .menu {
+        display: flex;
+        min-width: 4em;
+        justify-content: center;
+        align-items: center;
+    
+        align-self: right;
+        justify-self: right;
+        margin: var(--margin-menu);;
+    }
+
+    .closed {
+        display: none;
+    }
 }
 
 /*colors

@@ -7,8 +7,14 @@
     --color-list: #32cd30;
     --backgroundcolor-body: #808080;
     --backgroundcolor-header: #AEAEAE;
-    --leftmargin-main: 2em;
-    --verticalmargin-main: 2em;
-    --gap-header-link: 2em;
-    --gap-text: 1em
+    --margin-selfinfo: 2rem 2rem;
+    --margin-header: 2rem;
+    --margin-nav: 0 2rem 1em;
+    --margin-menu: 0.5rem;
+    --gap-header-link: 2rem;
+    --gap-text: 1em;
+    --border-menu: 2px solid white;
+    --border-line: 1px solid var(--color-list);
+    --border-test: 1px solid firebrick;
+    --grid-template-columns-header-mobile: 3fr 1fr;
 }
