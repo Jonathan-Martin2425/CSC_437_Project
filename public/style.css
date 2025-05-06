@@ -58,8 +58,6 @@ nav {
     justify-self: left;
     gap: var(--gap-header-link);
     visibility: visible;
-
-    border: var(--border-test);
 }
 
 main {
