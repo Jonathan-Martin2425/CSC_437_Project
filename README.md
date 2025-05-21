@@ -1,3 +1,4 @@
-# CSC_437_Project
+# Personal Website
 
-This is a project for CSC_437 Dynamic Web Development that will consist of a webstie that calculates GPA or class grades and stores them for a given user.
+This is a project for CSC_437 Dynamic Web Development that will consist of a personal website hosted on Cal Poly server as well as another lab assignment involving an example of a shopping website
+
